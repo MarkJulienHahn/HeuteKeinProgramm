@@ -280,7 +280,7 @@ const Screen01 = () => {
               <div className="embedContainer">
                 <iframe
                   src="https://player.vimeo.com/video/777305853?autoplay=1&muted=1&loop=1"
-                  frameborder={"0"}
+                  frameBorder={"0"}
                 ></iframe>
               </div>
             </div>
