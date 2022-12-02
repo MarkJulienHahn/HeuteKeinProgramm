@@ -280,9 +280,7 @@ const Screen01 = () => {
               <div className="embedContainer">
                 <iframe
                   src="https://player.vimeo.com/video/777305853?autoplay=1&muted=1&loop=1"
-                  frameborder="0"
-                  allow="autoplay; fullscreen"
-                  allowfullscreen
+                  frameborder={"0"}
                 ></iframe>
               </div>
             </div>
@@ -291,8 +289,8 @@ const Screen01 = () => {
               <p>Photo: Ben Quatflieg</p>
             </div> */}
             <p>
-              The lettering "5.9.72, no program today" contrasts with Avery
-              Brundage's famous phrase "The Games Must Go On," with which he
+              The lettering &quot;5.9.72, no program today&quot; contrasts with Avery
+              Brundage's famous phrase &quot;The Games Must Go On,&quot; with which he
               continued the Olympic Games on 6.9.72, one day after the Olympic
               Massacre in Munich. Not until the 2021 Olympics in Tokyo will
               there be a minute's silence for the victims of the 1972 attack for
@@ -301,8 +299,8 @@ const Screen01 = () => {
               <br /> <br />
               Ankie Spitzer, spokeswoman for the bereaved families, accused the
               Federal Republic of Germany of grave mistakes in a conversation
-              with Matthias Friebe on "Deutschlandfunk" on Aug. 28, 2022,
-              because their demands have gone unheard for 50 years: <br />{" "}
+              with Matthias Friebe on &quot;Deutschlandfunk&quot; on Aug. 28, 2022,
+              because their demands have gone unheard for 50 years: <br />
               <br />
               »I want to make it clear. We asked for three things:
               <br /> <br />
