@@ -1,0 +1,392 @@
+@font-face {
+  font-family: "Protest";
+  src: url(../public/fonts/ProtestGrotesk.ttf);
+}
+
+:root {
+  --margin-M: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Protest";
+  font-variation-settings: "wght" 80;
+  font-size: 11pt;
+  transition: all 1s ease;
+  -moz-font-feature-settings: "ss01";
+  -webkit-font-feature-settings: "ss01";
+  font-feature-settings: "ss01";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 30pt;
+}
+
+.headerImage {
+  width: 100vw;
+  height: 1000px;
+  overflow: hidden;
+  position:absolute;
+  left: 0;
+  transform: translateX(-20px)
+}
+
+.scrollWrapper {
+  padding-top: 100vh;
+  height: 100vh;
+  width: 100%;
+  overflow: scroll;
+  position: sticky;
+  top: 0;
+  padding: 0 var(--margin-M);
+}
+
+.scrollInner {
+  height: 10000px;
+  width: 100%;
+}
+
+.scrollContent {
+  position: fixed;
+  transition: all 1s ease;
+  animation: fadeIn 2s ease;
+  z-index: -1000;
+  pointer-events: none;
+}
+
+.center {
+  width: 100vw;
+  transform: translate(calc(50vw - 150px), calc(50vh - 100px));
+}
+
+.topLeft {
+  width: 100vw;
+  transform: translate(0vw);
+}
+
+.scrollFixed {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 500px;
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.outRight {
+  transform: translateX(100vw);
+  opacity: 0;
+}
+
+.outBottom {
+  transform: translateY(100vw);
+  opacity: 0;
+  pointer-events: none;
+  backdrop-filter: blur(0px);
+}
+
+.in {
+  transform: translateX(0vw);
+  opacity: 1;
+  backdrop-filter: blur(30px);
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.embedContainer {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  width: 100%;
+  height: auto;
+  z-index: -100;
+}
+
+.embedContainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@-moz-document url-prefix() {
+  .in {
+    transform: translateX(0vw);
+    opacity: 1;
+    background: rgba(0,0,0,0.3)
+  }
+  .info {
+    background: rgba(0,0,0,0.3)
+  }
+}
+
+.in p {
+  pointer-events: auto;
+}
+
+.Schnitt {
+  width: 60%;
+  mix-blend-mode: multiply;
+}
+
+.peterMell {
+  transform: translateX(300px);
+  width: 380px;
+}
+
+.keinProgramm {
+  transition: all 3s ease;
+  position: fixed;
+  top: 0;
+}
+
+.background {
+  transition: all 1s ease;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  height: 100vh;
+}
+
+.multiply {
+  mix-blend-mode: multiply;
+}
+
+.info {
+  /* backdrop-filter: blur(30px); */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.info div {
+  width: 50%;
+  font-size: 2vw;
+  letter-spacing: -0vw;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-variation-settings: "wght" 80;
+}
+
+.info div p {
+  transition: font-variation-settings 1s ease-out;
+  cursor: pointer;
+}
+
+.creditsBG {
+  position: fixed;
+  bottom: 0;
+  left: var(--margin-M);
+  z-index: 1000000;
+  background: black;
+  color: white;
+  width: 260px;
+  height: 40px;
+  mix-blend-mode: initial !important;
+}
+
+.creditsBG p {
+
+  color: white;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.info div p:hover {
+  font-variation-settings: "wght" 40;
+}
+
+.credits,
+.projects {
+  backdrop-filter: blur(30px);
+  transition: all 1s ease;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999999;
+  overflow: scroll;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  font-size: 18pt;
+  line-height: 26pt;
+  letter-spacing: -0.5px;
+  word-spacing: -1px;
+  font-variation-settings: "wght" 90;
+  padding: var(--margin-M) calc(10 * var(--margin-M));
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.credits p,
+.projects p {
+  pointer-events: none;
+  width: 70vw;
+  transition: all 0.2s ease;
+}
+
+.credits.visible p a {
+  pointer-events: auto;
+  border-bottom: 2px solid white;
+  padding-bottom: 3px;
+  transition: all 1s ease;
+}
+
+.credits p a:hover {
+  font-variation-settings: "wght" 150;
+}
+
+.credits.visible,
+.projects.visible {
+  pointer-events: auto;
+}
+
+/* .imageDesktop {
+  display: flex;
+  flex-direction: column;
+} */
+
+.imageMobile {
+  display: none;
+  flex-direction: column;
+}
+
+.imageWrapper {
+  width: 50vw;
+}
+
+.imageWideWrapper {
+  width: 90%;
+}
+
+.imageSmallWrapper {
+  width: 35vw;
+}
+
+.imageWrapper p, .imageSmallWrapper p, .imageWideWrapper p {
+  font-size: 12pt;
+  letter-spacing: 0;
+}
+
+.logo {
+  /* position: absolute;
+  top: 55px;
+  right: calc(10 * var(--margin-M)); */
+  width: 150px; 
+  left: 0;
+  padding: 50px 0;
+}
+
+.policy {
+  display: flex;
+  justify-content: center;
+  background: black;
+  color: white;
+  height: 100vh;
+  padding: var(--margin-M);
+  overflow-y: scroll;
+  font-size: 12pt;
+}
+
+.policy div {
+  max-width: 600px;
+}
+
+.policy h1, .policy h2, .policy h3 {
+  font-size: 12pt;
+}
+
+@media only screen and (max-width: 600px) {
+  .Schnitt {
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+    width: 100%;
+  }
+
+  .peterMell {
+    transform: translate(0, -55px);
+    bottom: 40px;
+  }
+  .info {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+  .info div {
+    font-size: 25pt;
+  }
+  .credits,
+  .projects {
+    padding: var(--margin-M);
+    font-size: 14pt;
+    line-height: 20pt;
+    letter-spacing: -0.3px;
+    word-spacing: -1px;
+  }
+  .credits p,
+  .projects p {
+    width: 100%;
+  }
+  .imageWrapper, .imageSmallWrapper, .imageWideWrapper {
+    width: 100%;
+  }
+
+  .logo {
+    position: relative;
+    left: 0;
+    top: 50px;
+    width: 150px;
+  }
+  .credits.visible p a {
+    border-bottom: 2px solid white;
+    padding-bottom: 1.5px;
+  }
+  .center {
+    transform: translate(calc(50vw - 130px), calc(50vh - 100px));
+  }
+  .imageDesktop {
+    display: none;
+  }
+  
+  .imageMobile {
+    display: flex;
+  }
+}
