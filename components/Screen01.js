@@ -290,10 +290,10 @@ const Screen01 = () => {
             </div> */}
             <p>
               The lettering &quot;5.9.72, no program today&quot; contrasts with Avery
-              Brundage's famous phrase &quot;The Games Must Go On,&quot; with which he
+              Brundage&lsquo;s famous phrase &quot;The Games Must Go On,&quot; with which he
               continued the Olympic Games on 6.9.72, one day after the Olympic
               Massacre in Munich. Not until the 2021 Olympics in Tokyo will
-              there be a minute's silence for the victims of the 1972 attack for
+              there be a minute&lsquo;s silence for the victims of the 1972 attack for
               the first time, something the bereaved families have fought 49
               years for.
               <br /> <br />
